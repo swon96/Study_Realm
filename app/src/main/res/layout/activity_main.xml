@@ -7,13 +7,29 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-    <TextView
+    <ListView
+            android:id="@+id/realm_listview"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            tools:ignore="MissingConstraints">
+
+    </ListView>
+
+    <Button
+            android:id="@+id/addButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintTop_toBottomOf="@+id/realm_listview"
+            android:text="ADD"/>
+
+    <Button
+            android:id="@+id/removeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintTop_toBottomOf="@+id/realm_listview"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:text="REMOVE"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

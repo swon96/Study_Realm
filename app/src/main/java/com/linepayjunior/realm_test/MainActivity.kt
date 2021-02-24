@@ -1,5 +1,6 @@
 package com.linepayjunior.realm_test
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -66,6 +67,10 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this, "insertTodo 실행됨", Toast.LENGTH_LONG).show()
         Log.e("MainActivity realm:" , realmResult.toString())
 
+        // Add 버튼 눌러도 dialog와 화면이 그대로 유지되는 현상을 막기 위하여 MainActivity 를 한번 불러주고 Finish 한다.
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish()
 
     }
 
